@@ -22,29 +22,10 @@ p {
     font-size: 1.2em;
 }
 
-/* Social Icons */
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.social-icons a img {
-    width: 40px;
-    height: 40px;
-}
-
-.social-icons a:hover {
-    transform: scale(1.1);
-}
-
-/* Banner */
-.banner {
-    width: 80%;
-    max-width: 500px;
+/* Social Icons (Single Image) */
+.social-icons img {
+    width: 150px; /* Set uniform size */
+    height: auto;
     display: block;
     margin: 20px auto;
 }
@@ -60,10 +41,39 @@ p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.airdrop h2 {
-    font-size: 2em;
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
+.tab-button {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.tab-button.active {
+    background: #FF4081;
+    border-radius: 5px;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Form */
 form input {
     width: 90%;
     padding: 10px;
