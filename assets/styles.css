@@ -1,0 +1,50 @@
+/* Airdrop Form */
+.airdrop-form {
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--light-purple);
+    text-align: center;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+.airdrop-form h2 {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.airdrop-form p {
+    color: var(--neon-green);
+    font-size: 1.2rem;
+}
+
+.airdrop-form input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.airdrop-form button {
+    background: var(--hot-pink);
+    color: var(--white);
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.airdrop-form button:hover {
+    background: var(--neon-green);
+    color: var(--dark-purple);
+    transform: scale(1.1);
+      }
