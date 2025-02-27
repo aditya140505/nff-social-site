@@ -3,103 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFF Coin Airdrop</title>
-    
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <!-- Link to External CSS -->
+    <title>NFF Airdrop | nff.social</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <div class="terminal">
-        <h1>🚀 NFF Coin Airdrop</h1>
-        <p>💰 Claim your free NFF Coin by submitting the details below!</p>
-
-        <form id="airdropForm">
-            <label>📢 Twitter Username</label>
-            <input type="text" id="twitter" placeholder="Enter your Twitter username" required>
-
-            <label>📡 Telegram Username</label>
-            <input type="text" id="telegram" placeholder="Enter your Telegram username" required>
-
-            <label>📧 Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-
-            <label>💳 Solana Wallet Address</label>
-            <input type="text" id="wallet" placeholder="Enter your Solana wallet address" required>
-
-            <!-- Google reCAPTCHA -->
-            <div class="g-recaptcha" data-sitekey="6LdCB-QqAAAAANROWlB9ysWM1Xk9W-ZymiTw7s5J"></div>
-            
-            <button type="submit">🚀 Claim Airdrop</button>
-        </form>
-
-        <p class="message" id="message"></p>
-
-        <!-- Social Media Links -->
-        <div class="social-links">
-            <p>🔗 Follow us for updates:</p>
-            <a href="https://twitter.com/NFFsocial" target="_blank">🐦 Twitter</a>
-            <a href="https://t.me/NFFsocial" target="_blank">📢 Telegram</a>
-            <a href="https://discord.gg/NFFsocial" target="_blank">🎮 Discord</a>
-            <a href="https://instagram.com/NFFsocial" target="_blank">📷 Instagram</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">NFF Token</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#airdrop">Airdrop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <script>
-    document.getElementById("airdropForm").addEventListener("submit", function(event) {
-        event.preventDefault();
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container text-center">
+            <h1>Claim Your Free NFF Tokens</h1>
+            <p>Join the airdrop by following us on Twitter & Telegram and submitting your Solana wallet.</p>
+            <a href="#airdrop" class="btn btn-primary btn-lg">Join Airdrop Now</a>
+        </div>
+    </header>
 
-        var twitter = document.getElementById("twitter").value.trim();
-        var telegram = document.getElementById("telegram").value.trim();
-        var email = document.getElementById("email").value.trim();
-        var wallet = document.getElementById("wallet").value.trim();
-        var recaptchaResponse = grecaptcha.getResponse();
-        var messageElement = document.getElementById("message");
+    <!-- Airdrop Registration -->
+    <section id="airdrop" class="container my-5">
+        <h2 class="text-center">Airdrop Registration</h2>
+        <p class="text-center">Complete the form below to receive your NFF tokens.</p>
 
-        // Remove @ if user added it manually
-        if (twitter.startsWith("@")) {
-            twitter = twitter.substring(1);
-        }
-        if (telegram.startsWith("@")) {
-            telegram = telegram.substring(1);
-        }
+        <form id="airdrop-form" class="mx-auto">
+            <div class="mb-3">
+                <label for="twitter" class="form-label">Twitter Handle</label>
+                <input type="text" class="form-control" id="twitter" placeholder="@yourhandle" required>
+            </div>
+            <div class="mb-3">
+                <label for="telegram" class="form-label">Telegram Username</label>
+                <input type="text" class="form-control" id="telegram" placeholder="@yourusername" required>
+            </div>
+            <div class="mb-3">
+                <label for="solana" class="form-label">Solana Wallet Address</label>
+                <input type="text" class="form-control" id="solana" placeholder="Your SOL Address" required>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </section>
 
-        // Validate Solana wallet address (Basic Check: 32-44 characters)
-        if (wallet.length < 32 || wallet.length > 44) {
-            messageElement.style.color = "#FF0000";
-            messageElement.innerText = "❌ Invalid Solana wallet address!";
-            return;
-        }
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2 class="text-center">About NFF Token</h2>
+        <p class="text-center">NFF is a Solana-based token designed for community engagement and NFT trading.</p>
+    </section>
 
-        if (!recaptchaResponse) {
-            messageElement.style.color = "#FF0000";
-            messageElement.innerText = "❌ Please complete the reCAPTCHA!";
-            return;
-        }
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5 text-center">
+        <h2>Contact Us</h2>
+        <p>Follow us on social media:</p>
+        <a href="https://twitter.com/nffsocial" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://t.me/nffsocial" class="me-3"><i class="fab fa-telegram fa-2x"></i></a>
+        <a href="https://instagram.com/nffsocial"><i class="fab fa-instagram fa-2x"></i></a>
+    </section>
 
-        var webhookURL = "http://20.197.3.57:5000/webhook";
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-light">
+        <p>&copy; 2025 NFF Token | Powered by nff.social</p>
+    </footer>
 
-        fetch(webhookURL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ twitter, telegram, email, wallet, recaptchaResponse })
-        })
-        .then(response => response.json())
-        .then(data => {
-            messageElement.style.color = "#00FF00";
-            messageElement.innerText = "✅ Airdrop Entry Submitted Successfully!";
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            messageElement.style.color = "#FF0000";
-            messageElement.innerText = "❌ Error submitting entry. Try again!";
-        });
-    });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
-<!-- Force update -->
