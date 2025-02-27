@@ -3,48 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFF Token Airdrop</title>
-
-    <!-- Google Fonts -->
+    <title>NFF Social</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome (For Social Icons) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Social Media Icons -->
-    <div class="social-icons">
-        <a href="https://twitter.com/nffsocial" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/nffsocial" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://t.me/nffsocial" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-    </div>
-
-    <!-- Hero Section -->
-    <header class="hero">
+    <header>
         <div class="container">
-            <img src="assets/nft-banner.svg" alt="NFT Banner" class="hero-illustration">
-            <h1>Claim Your Free NFF Tokens</h1>
-            <p>Join the airdrop by following us on Twitter & Telegram and submitting your Solana wallet.</p>
-            <a href="#airdrop" class="btn">Join Airdrop Now</a>
+            <h1>NFF Social</h1>
+            <p>Flip NFTs with Zero Gas Fees</p>
         </div>
     </header>
 
-    <!-- Airdrop Section -->
-    <section id="airdrop">
-        <h2>Airdrop Registration</h2>
-        <p>Complete the form below to receive your NFF tokens.</p>
+    <section class="social-icons">
+        <a href="https://twitter.com/nffsocial" target="_blank"><img src="assets/images/twitter.svg" alt="Twitter"></a>
+        <a href="https://t.me/nffsocial" target="_blank"><img src="assets/images/telegram.svg" alt="Telegram"></a>
+        <a href="https://instagram.com/nffsocial" target="_blank"><img src="assets/images/instagram.svg" alt="Instagram"></a>
+    </section>
 
-        <form id="airdrop-form">
-            <input type="text" placeholder="Twitter Handle (@yourhandle)" required>
-            <input type="text" placeholder="Telegram Username (@yourusername)" required>
-            <input type="text" placeholder="Solana Wallet Address" required>
-            <button type="submit" class="btn">Submit</button>
+    <section class="main-banner">
+        <img src="assets/images/banner.png" alt="NFT Illustration">
+    </section>
+
+    <section class="airdrop-form">
+        <h2>Join Our Airdrop</h2>
+        <p>Enter your Solana wallet address below</p>
+        <form action="#" method="POST">
+            <input type="text" name="wallet" placeholder="Enter Solana Wallet Address" required>
+            <button type="submit">Claim Airdrop</button>
         </form>
     </section>
 
+    <footer>
+        <p>© 2025 NFF Social. All rights reserved.</p>
+    </footer>
 </body>
 </html>
