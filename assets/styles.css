@@ -1,50 +1,97 @@
-/* Airdrop Form */
-.airdrop-form {
-    margin-top: 40px;
-    padding: 20px;
-    background: var(--light-purple);
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #6A0DAD, #E91E63);
+    color: #fff;
     text-align: center;
-    border-radius: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Banner */
+.banner {
     width: 80%;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 15px var(--neon-green);
+    display: block;
+    margin: 20px auto;
 }
 
-.airdrop-form h2 {
-    color: var(--white);
-    font-size: 2rem;
+/* Airdrop Section */
+.airdrop {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.airdrop-form p {
-    color: var(--neon-green);
-    font-size: 1.2rem;
+.airdrop h2 {
+    font-size: 2em;
 }
 
-.airdrop-form input {
+form input {
     width: 90%;
-    padding: 12px;
+    padding: 10px;
     margin: 10px 0;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    text-align: center;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.airdrop-form button {
-    background: var(--hot-pink);
-    color: var(--white);
-    padding: 12px 24px;
-    font-size: 1rem;
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #FF4081;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
+    transition: background 0.3s;
 }
 
-.airdrop-form button:hover {
-    background: var(--neon-green);
-    color: var(--dark-purple);
-    transform: scale(1.1);
-      }
+form button:hover {
+    background: #F50057;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+}
