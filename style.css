@@ -9,6 +9,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    text-align: center;
 }
 
 .terminal {
@@ -16,7 +17,6 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 0px 15px #00ff00;
-    text-align: center;
     width: 90%;
     max-width: 500px;
 }
@@ -47,6 +47,7 @@ input {
     color: #00ff00;
     font-size: 14px;
     font-family: 'Fira Code', monospace;
+    text-align: center;
 }
 
 input::placeholder {
@@ -75,6 +76,24 @@ button:hover {
     margin-top: 15px;
     font-size: 14px;
     font-weight: bold;
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.social-links a {
+    display: block;
+    color: #00ff00;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #33ff33;
 }
 
 .g-recaptcha {
