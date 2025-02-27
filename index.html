@@ -13,35 +13,63 @@
         <p>Flip NFTs with Zero Gas Fees</p>
 
         <div class="social-icons">
-            <a href="https://twitter.com/nffsocial" target="_blank">
-                <img src="assets/images/twitter.png" alt="Twitter">
-            </a>
-            <a href="https://t.me/nffsocial" target="_blank">
-                <img src="assets/images/telegram.png" alt="Telegram">
-            </a>
-            <a href="https://instagram.com/nffsocial" target="_blank">
-                <img src="assets/images/instagram.png" alt="Instagram">
-            </a>
+            <img src="assets/images/social-icons.png" alt="Social Media Icons">
         </div>
     </header>
 
     <main>
-        <img src="assets/images/banner.svg" alt="NFT Illustration" class="banner">
-
         <section class="airdrop">
             <h2>Join Our Airdrop</h2>
-            <p>Enter your Solana wallet address below</p>
+            <p>Enter your details below</p>
 
-            <form>
-                <input type="text" placeholder="Enter Solana Wallet Address" required>
-                <button type="submit">Claim Airdrop</button>
-            </form>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'twitter')">Twitter</button>
+                <button class="tab-button" onclick="openTab(event, 'telegram')">Telegram</button>
+                <button class="tab-button" onclick="openTab(event, 'email')">Email</button>
+            </div>
+
+            <div id="twitter" class="tab-content active">
+                <form>
+                    <input type="text" placeholder="Enter Twitter Handle" required>
+                    <button type="submit">Claim Airdrop</button>
+                </form>
+            </div>
+
+            <div id="telegram" class="tab-content">
+                <form>
+                    <input type="text" placeholder="Enter Telegram Handle" required>
+                    <button type="submit">Claim Airdrop</button>
+                </form>
+            </div>
+
+            <div id="email" class="tab-content">
+                <form>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <button type="submit">Claim Airdrop</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2025 NFF Social. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
