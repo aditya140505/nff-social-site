@@ -13,12 +13,13 @@
             margin: 0;
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: #fff;
-            overflow: hidden;
-            height: 100vh;
+            height: 100vh; /* Full height */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow-y: auto; /* 🔥 Fix: Enables scrolling */
+            padding: 20px;
         }
 
         /* Glowing Text */
@@ -64,17 +65,11 @@
             color: #000;
         }
 
-        /* Animations */
-        .fade { opacity: 0; animation: fadeIn 2s forwards; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        /* Fix for Mobile View */
+        .content {
+            max-width: 90%;
+            width: 600px;
+            padding-bottom: 20px;
         }
 
         /* Social Links */
@@ -102,25 +97,27 @@
 </head>
 <body>
 
-    <h1>NFF.social is Coming Soon!</h1>
-    <p>The Future of NFTs Starts Here. Stay Tuned for the Launch!</p>
+    <div class="content">
+        <h1>NFF.social is Coming Soon!</h1>
+        <p>The Future of NFTs Starts Here. Stay Tuned for the Launch!</p>
 
-    <h2 class="fade">Join the Airdrop & Get Exclusive Rewards!</h2>
-    
-    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-        <input type="text" name="twitter" placeholder="Your Twitter @username" required><br>
-        <input type="text" name="discord" placeholder="Your Discord ID" required><br>
-        <input type="email" name="email" placeholder="Your Email" required><br>
-        <input type="text" name="wallet" placeholder="Your Crypto Wallet Address" required><br>
-        <button type="submit">Join Airdrop</button>
-    </form>
+        <h2 class="fade">Join the Airdrop & Get Exclusive Rewards!</h2>
 
-    <div class="social-links">
-        <p>Follow us:</p>
-        <a href="https://twitter.com/NFFsocial" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="https://instagram.com/nffsocial" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://discord.gg/nffsocial" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-        <a href="https://t.me/nffsocial" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+        <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+            <input type="text" name="twitter" placeholder="Your Twitter @username" required><br>
+            <input type="text" name="discord" placeholder="Your Discord ID" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <input type="text" name="wallet" placeholder="Your Crypto Wallet Address" required><br>
+            <button type="submit">Join Airdrop</button>
+        </form>
+
+        <div class="social-links">
+            <p>Follow us:</p>
+            <a href="https://twitter.com/NFFsocial" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://instagram.com/nffsocial" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://discord.gg/nffsocial" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://t.me/nffsocial" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+        </div>
     </div>
 
 </body>
