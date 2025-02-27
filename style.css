@@ -6,6 +6,13 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Social Icons */
@@ -14,16 +21,19 @@ body {
     justify-content: center;
     gap: 15px;
     padding: 15px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 
 .social-icons a {
     color: #90CAF9; /* Pastel Blue */
     font-size: 24px;
-    transition: 0.3s;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
     color: #F48FB1; /* Soft Pink */
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -35,16 +45,25 @@ body {
     width: 250px;
     max-width: 100%;
     margin-bottom: 20px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Floating Effect */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .hero h1 {
     font-size: 2.2em;
     color: #333;
+    animation: fadeIn 1s ease-in-out 0.8s forwards;
 }
 
 .hero p {
     font-size: 1.2em;
     color: #555;
+    animation: fadeIn 1s ease-in-out 1s forwards;
 }
 
 /* Glassmorphism Button */
@@ -58,17 +77,22 @@ body {
     color: #424242;
     text-decoration: none;
     display: inline-block;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.2s forwards;
 }
 
 .btn:hover {
     background: #A5D6A7; /* Mint Green */
     color: white;
+    transform: scale(1.05);
 }
 
 /* Airdrop Form */
 #airdrop {
     margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
 }
 
 #airdrop h2 {
@@ -90,8 +114,18 @@ body {
     border: 1px solid #ccc;
     font-size: 16px;
     outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+#airdrop-form input:focus {
+    border-color: #90CAF9;
 }
 
 #airdrop-form button {
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#airdrop-form button:hover {
+    transform: scale(1.05);
 }
