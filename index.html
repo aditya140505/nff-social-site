@@ -3,122 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFF.social – The Future of NFTs</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>NFF.social – Airdrop Entry</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
-        /* General Page Styling */
         body {
             text-align: center;
             font-family: 'Arial', sans-serif;
             margin: 0;
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: #fff;
-            height: 100vh; /* Full height */
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow-y: auto; /* 🔥 Fix: Enables scrolling */
             padding: 20px;
         }
 
-        /* Glowing Text */
         h1 {
             font-size: 3em;
-            color: #ffffff;
             text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-            animation: fadeIn 2s ease-in-out;
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             opacity: 0.9;
             color: #b3b3b3;
-            animation: slideIn 2s ease-in-out;
         }
 
-        a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
         }
 
-        /* Input & Button Styles */
         input, button {
             padding: 12px;
             font-size: 1em;
-            margin: 10px;
+            margin: 10px 0;
             border-radius: 8px;
             border: 2px solid #FFD700;
             background: rgba(255, 215, 0, 0.2);
             color: #fff;
             text-align: center;
+            width: 100%;
+        }
+
+        input:required {
+            border: 2px solid #ff5555;
+        }
+
+        .g-recaptcha {
+            margin-top: 10px;
         }
 
         button {
             cursor: pointer;
             transition: 0.3s ease-in-out;
+            background: #FFD700;
+            color: #000;
+            font-weight: bold;
         }
 
         button:hover {
-            background: #FFD700;
-            color: #000;
+            background: #ffcc00;
         }
 
-        /* Fix for Mobile View */
-        .content {
-            max-width: 90%;
-            width: 600px;
-            padding-bottom: 20px;
+        .message {
+            margin-top: 15px;
+            font-size: 1.1em;
+            font-weight: bold;
         }
 
-        /* Social Links */
-        .social-links {
-            margin-top: 20px;
-        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
 
-        .social-links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background: rgba(255, 215, 0, 0.2);
-            transition: 0.3s ease-in-out;
-            color: #FFD700;
-            font-size: 1.2em;
+            form {
+                width: 90%;
+            }
         }
-
-        .social-links a:hover {
-            background: #FFD700;
-            color: #000;
-        }
-
     </style>
 </head>
 <body>
 
-    <div class="content">
-        <h1>NFF.social is Coming Soon!</h1>
-        <p>The Future of NFTs Starts Here. Stay Tuned for the Launch!</p>
+    <h1>NFF.social Airdrop</h1>
+    <p>Complete the form below to join the airdrop!</p>
 
-        <h2 class="fade">Join the Airdrop & Get Exclusive Rewards!</h2>
+    <form id="airdropForm">
+        <input type="text" id="twitter" placeholder="Your Twitter @username" required pattern="^@[A-Za-z0-9_]+$"><br>
+        <input type="text" id="telegram" placeholder="Your Telegram @username" required pattern="^@[A-Za-z0-9_]+$"><br>
+        <input type="email" id="email" placeholder="Your Email" required><br>
+        <input type="text" id="wallet" placeholder="Your Crypto Wallet Address" required><br>
 
-        <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-            <input type="text" name="twitter" placeholder="Your Twitter @username" required><br>
-            <input type="text" name="discord" placeholder="Your Discord ID" required><br>
-            <input type="email" name="email" placeholder="Your Email" required><br>
-            <input type="text" name="wallet" placeholder="Your Crypto Wallet Address" required><br>
-            <button type="submit">Join Airdrop</button>
-        </form>
+        <!-- Google reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="6LdCB-QqAAAAANROWlB9ysWM1Xk9W-ZymiTw7s5J"></div>
+        
+        <button type="submit">Join Airdrop</button>
+    </form>
 
-        <div class="social-links">
-            <p>Follow us:</p>
-            <a href="https://twitter.com/NFFsocial" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="https://instagram.com/nffsocial" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://discord.gg/nffsocial" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-            <a href="https://t.me/nffsocial" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-        </div>
-    </div>
+    <p class="message" id="message"></p>
+
+    <script>
+    document.getElementById("airdropForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var twitter = document.getElementById("twitter").value.trim();
+        var telegram = document.getElementById("telegram").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var wallet = document.getElementById("wallet").value.trim();
+        var recaptchaResponse = grecaptcha.getResponse();
+        var messageElement = document.getElementById("message");
+
+        if (!recaptchaResponse) {
+            messageElement.style.color = "#FF0000";
+            messageElement.innerText = "❌ Please complete the reCAPTCHA!";
+            return;
+        }
+
+        var webhookURL = "http://20.197.3.57:5000/webhook";
+
+        fetch(webhookURL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ twitter, telegram, email, wallet, recaptchaResponse })
+        })
+        .then(response => response.json())
+        .then(data => {
+            messageElement.style.color = "#00FF00";
+            messageElement.innerText = "✅ Airdrop Entry Submitted Successfully!";
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            messageElement.style.color = "#FF0000";
+            messageElement.innerText = "❌ Error submitting entry. Try again!";
+        });
+    });
+    </script>
 
 </body>
 </html>
