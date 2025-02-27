@@ -3,42 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFF Airdrop | nff.social</title>
+    <title>NFF Token Airdrop</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Lottie Animation Library -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest"></script>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">NFF Token</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#airdrop">Airdrop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <!-- Hero Section -->
     <header class="hero">
         <div class="container text-center">
+            <lottie-player 
+                src="https://lottie.iconscout.com/lottie/premium-preview/sell-nft-5249454-4385771.json"  
+                background="transparent"  
+                speed="1"  
+                style="width: 350px; height: 350px;"  
+                loop autoplay>
+            </lottie-player>
+
             <h1>Claim Your Free NFF Tokens</h1>
             <p>Join the airdrop by following us on Twitter & Telegram and submitting your Solana wallet.</p>
             <a href="#airdrop" class="btn btn-primary btn-lg">Join Airdrop Now</a>
         </div>
     </header>
 
-    <!-- Airdrop Registration -->
+    <!-- Airdrop Section -->
     <section id="airdrop" class="container my-5">
         <h2 class="text-center">Airdrop Registration</h2>
+
+        <div class="text-center">
+            <lottie-player 
+                src="https://assets4.lottiefiles.com/packages/lf20_airdrop.json"  
+                background="transparent"  
+                speed="1"  
+                style="width: 250px; height: 250px;"  
+                loop autoplay>
+            </lottie-player>
+        </div>
+
         <p class="text-center">Complete the form below to receive your NFF tokens.</p>
 
         <form id="airdrop-form" class="mx-auto">
@@ -61,23 +69,27 @@
     <!-- About Section -->
     <section id="about" class="container my-5">
         <h2 class="text-center">About NFF Token</h2>
+
+        <div class="text-center">
+            <lottie-player 
+                src="https://assets5.lottiefiles.com/packages/lf20_nftmarket.json"  
+                background="transparent"  
+                speed="1"  
+                style="width: 250px; height: 250px;"  
+                loop autoplay>
+            </lottie-player>
+        </div>
+
         <p class="text-center">NFF is a Solana-based token designed for community engagement and NFT trading.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container my-5 text-center">
-        <h2>Contact Us</h2>
-        <p>Follow us on social media:</p>
-        <a href="https://twitter.com/nffsocial" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://t.me/nffsocial" class="me-3"><i class="fab fa-telegram fa-2x"></i></a>
-        <a href="https://instagram.com/nffsocial"><i class="fab fa-instagram fa-2x"></i></a>
-    </section>
-
     <!-- Footer -->
-    <footer class="text-center py-3 bg-dark text-light">
-        <p>&copy; 2025 NFF Token | Powered by nff.social</p>
+    <footer class="text-center py-3">
+        <p>© 2025 NFF Token | <a href="https://nff.social">nff.social</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Bootstrap JavaScript (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
