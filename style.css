@@ -1,74 +1,97 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: #EDE7F6; /* Soft Lavender */
+    color: #424242; /* Dark Gray */
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.social-icons a {
+    color: #90CAF9; /* Pastel Blue */
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #F48FB1; /* Soft Pink */
+}
+
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 60px 0;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
+    padding: 50px 20px;
+}
+
+.hero-illustration {
+    width: 250px;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 20px;
+    font-size: 2.2em;
+    color: #333;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.2em;
+    color: #555;
 }
 
-.hero .btn {
-    margin-top: 15px;
+/* Glassmorphism Button */
+.btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    color: #424242;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-/* Airdrop Section */
+.btn:hover {
+    background: #A5D6A7; /* Mint Green */
+    color: white;
+}
+
+/* Airdrop Form */
 #airdrop {
-    background: white;
-    padding: 50px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: auto;
+    margin-top: 50px;
 }
 
 #airdrop h2 {
-    color: #2575fc;
+    font-size: 1.8em;
+    color: #333;
 }
 
-#airdrop .form-control {
-    border-radius: 5px;
+#airdrop-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 15px;
 }
 
-#airdrop .btn {
-    width: 100%;
-    font-size: 1.2rem;
+#airdrop-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
 }
 
-/* About Section */
-#about {
-    padding: 50px 20px;
-}
-
-#about h2 {
-    color: #6a11cb;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    padding: 15px 0;
-}
-
-footer a {
-    color: #6a11cb;
-    text-decoration: none;
+#airdrop-form button {
+    cursor: pointer;
 }
